@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 11:53:46 by gicho             #+#    #+#             */
-/*   Updated: 2020/01/23 16:44:54 by gicho            ###   ########.fr       */
+/*   Updated: 2020/01/23 18:33:22 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,14 @@
 
 void	ft_rev_int_tab(int *tab, int size)
 {
-	char c;
+	int i;
+	int tmp;
 
-	while (size--)
+	i = 0;
+	while (i < --size)
 	{
-		c = '0' + tab[size];
-		write(1, &c, 1);
+		tmp = tab[i];
+		tab[i++] = tab[size];
+		tab[size] = tmp;
 	}
 }
