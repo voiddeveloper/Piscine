@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/24 15:55:26 by gicho             #+#    #+#             */
-/*   Updated: 2020/01/26 02:36:22 by gicho            ###   ########.fr       */
+/*   Updated: 2020/01/26 04:10:41 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	print_addr(long long addr, int cnt)
 	ft_putchar(g_hex[addr % 16]);
 }
 
-void	process(char *ptr, int len)
+void	process(unsigned char *ptr, int len)
 {
 	int i;
 
@@ -62,7 +62,7 @@ void	*ft_print_memory(void *addr, unsigned int size)
 {
 	unsigned int	i;
 	int				len;
-	char			*ptr;
+	unsigned char	*ptr;
 
 	g_hex = "0123456789abcdef";
 	i = 0;
@@ -72,7 +72,7 @@ void	*ft_print_memory(void *addr, unsigned int size)
 			len = 16;
 		else
 			len = size;
-		ptr = (char*)addr + i;
+		ptr = (unsigned char*)addr + i;
 		print_addr((long long)ptr, 0);
 		ft_putchar(':');
 		process(ptr, len);
