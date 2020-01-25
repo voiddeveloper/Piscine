@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/24 15:55:26 by gicho             #+#    #+#             */
-/*   Updated: 2020/01/26 00:34:39 by gicho            ###   ########.fr       */
+/*   Updated: 2020/01/26 02:36:22 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,13 @@ void	process(char *ptr, int len)
 		ft_putchar(g_hex[(int)ptr[i] % 16]);
 		++i;
 	}
+	while (i < 16)
+	{
+		if (i % 2 == 0)
+			ft_putchar(' ');
+		write(1, "  ", 2);
+		++i;
+	}
 }
 
 void	*ft_print_memory(void *addr, unsigned int size)
@@ -70,8 +77,6 @@ void	*ft_print_memory(void *addr, unsigned int size)
 		ft_putchar(':');
 		process(ptr, len);
 		ft_putchar(' ');
-		if (len < 16)
-			write(1, "    ", 4);
 		write(1, g_str, len);
 		ft_putchar('\n');
 		size -= len;
