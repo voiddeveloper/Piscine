@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/24 15:55:26 by gicho             #+#    #+#             */
-/*   Updated: 2020/01/25 20:02:41 by gicho            ###   ########.fr       */
+/*   Updated: 2020/01/26 00:34:39 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,9 @@ void	process(char *ptr, int len)
 
 void	*ft_print_memory(void *addr, unsigned int size)
 {
-	int		i;
-	int		len;
-	char	*ptr;
+	unsigned int	i;
+	int				len;
+	char			*ptr;
 
 	g_hex = "0123456789abcdef";
 	i = 0;
