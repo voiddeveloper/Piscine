@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/26 10:52:16 by gicho             #+#    #+#             */
-/*   Updated: 2020/01/26 10:53:02 by gicho            ###   ########.fr       */
+/*   Updated: 2020/01/26 18:27:44 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 		++i;
 		++dest;
 	}
-	while (i + 1 < size)
+	while (*src && i + 1 < size)
 	{
 		*dest = *src;
 		++dest;

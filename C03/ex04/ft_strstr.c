@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/26 11:08:31 by gicho             #+#    #+#             */
-/*   Updated: 2020/01/26 11:09:53 by gicho            ###   ########.fr       */
+/*   Updated: 2020/01/26 18:52:05 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ char	*ft_strstr(char *str, char *to_find)
 			break ;
 		++str;
 	}
-	return (str);
+	return (to_find);
 }
