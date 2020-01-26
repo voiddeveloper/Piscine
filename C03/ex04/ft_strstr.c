@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/26 11:08:31 by gicho             #+#    #+#             */
-/*   Updated: 2020/01/26 18:52:05 by gicho            ###   ########.fr       */
+/*   Updated: 2020/01/26 19:49:53 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@ char	*ft_strstr(char *str, char *to_find)
 	char *a;
 	char *b;
 
+	if (!*to_find)
+		return (str);
 	while (*str)
 	{
 		a = str;
@@ -25,8 +27,8 @@ char	*ft_strstr(char *str, char *to_find)
 			++b;
 		}
 		if (*b == 0)
-			break ;
+			return (str);
 		++str;
 	}
-	return (to_find);
+	return (0);
 }
