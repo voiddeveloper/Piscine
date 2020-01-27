@@ -6,43 +6,31 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/27 14:58:52 by gicho             #+#    #+#             */
-/*   Updated: 2020/01/27 16:55:08 by gicho            ###   ########.fr       */
+/*   Updated: 2020/01/27 19:57:51 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_is_number(char c)
-{
-	return ('0' <= c && c <= '9');
-}
-
-long	get_number(char *str)
-{
-	int ret;
-
-	ret = 0;
-	while (*str && ft_is_number(*str))
-	{
-		ret *= 10;
-		ret += (*str - '0');
-		++str;
-	}
-	return (ret);
-}
-
 int		ft_atoi(char *str)
 {
+	int ret;
 	int sign;
 
+	ret = 0;
 	sign = 1;
-	while (*str)
-	{
-		if (*str == '-')
-			sign *= -1;
-		else if (ft_is_number(*str))
-			return ((get_number(str)) * sign);
-		else if (*str != '+')
-			sign = 1;
+	while (*str == '\t'
+			|| *str == '\n'
+			|| *str == '\v'
+			|| *str == '\f'
+			|| *str == '\r'
+			|| *str == ' ')
 		++str;
+	while (*str == '+' || *str == '-')
+		if (*(str++) == '-')
+			sign *= -1;
+	while ('0' <= *str && *str <= '9')
+	{
+		ret *= 10;
+		ret += (sign * (*(str++) - '0'));
 	}
-	return (0);
+	return (ret);
 }
