@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/26 13:14:10 by gicho             #+#    #+#             */
-/*   Updated: 2020/01/26 19:20:01 by gicho            ###   ########.fr       */
+/*   Updated: 2020/01/27 17:01:50 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,6 @@ void	ft_putchar(char c)
 
 void	ft_putstr(char *str)
 {
-	int i;
-
-	i = 0;
-	while (str[i])
-		ft_putchar(str[i++]);
+	while (*str)
+		ft_putchar(*(str++));
 }
