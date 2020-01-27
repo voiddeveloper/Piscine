@@ -6,14 +6,14 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/27 16:54:36 by gicho             #+#    #+#             */
-/*   Updated: 2020/01/27 16:57:28 by gicho            ###   ########.fr       */
+/*   Updated: 2020/01/27 20:27:41 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char		*g_base;
-long long	g_len;
+char	*g_base;
+int		g_len;
 
 int		ft_get_len(void)
 {
@@ -26,11 +26,12 @@ int		ft_get_len(void)
 	g_len = 0;
 	while (g_base[g_len])
 	{
-		if (chk[g_base[g_len]] ||
-				g_base[g_len] == '+' ||
-				g_base[g_len] == '-')
+		if (chk[(int)g_base[g_len]] ||
+			g_base[g_len] == '+' ||
+			g_base[g_len] == '-' ||
+			g_base[g_len] == ' ')
 			return (0);
-		chk[g_base[g_len++]] = 1;
+		chk[(int)g_base[g_len++]] = 1;
 	}
 	return (1);
 }
@@ -49,41 +50,30 @@ int		ft_get_idx(char c)
 	return (-1);
 }
 
-long	get_number(char *str)
-{
-	long	ret;
-	int		idx;
-
-	ret = 0;
-	while (*str)
-	{
-		idx = ft_get_idx(*str);
-		if (idx == -1)
-			break ;
-		ret *= g_len;
-		ret += idx;
-		++str;
-	}
-	return (ret);
-}
-
 int		ft_atoi_base(char *str, char *base)
 {
+	int ret;
 	int sign;
+	int idx;
 
-	sign = 1;
 	g_base = base;
 	if (!ft_get_len() || g_len == 0 || g_len == 1)
 		return (0);
+	ret = 0;
+	sign = 1;
+	while (*str == '\t' || *str == '\n' || *str == '\v'
+			|| *str == '\f' || *str == '\r' || *str == ' ')
+		++str;
+	while (*str == '+' || *str == '-')
+		if (*(str++) == '-')
+			sign *= -1;
 	while (*str)
 	{
-		if (*str == '-')
-			sign *= -1;
-		else if (ft_get_idx(*str) != -1)
-			return ((get_number(str)) * sign);
-		else if (*str != '+')
-			sign = 1;
-		++str;
+		idx = ft_get_idx(*(str++));
+		if (idx == -1)
+			break ;
+		ret *= g_len;
+		ret += (sign * idx);
 	}
-	return (0);
+	return (ret);
 }

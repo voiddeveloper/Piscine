@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/27 16:23:08 by gicho             #+#    #+#             */
-/*   Updated: 2020/01/27 16:26:02 by gicho            ###   ########.fr       */
+/*   Updated: 2020/01/27 20:07:36 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char *g_base;
 long long g_len;
 
-void	ft_print_num(long nbr)
+void	ft_print_num(int nbr)
 {
 	if (!nbr)
 		return ;
@@ -34,18 +34,18 @@ int		ft_get_len(void)
 	g_len = 0;
 	while (g_base[g_len])
 	{
-		if (chk[g_base[g_len]] ||
-				g_base[g_len] == '+' ||
-				g_base[g_len] == '-')
+		if (chk[(int)g_base[g_len]] ||
+			g_base[g_len] == '+' ||
+			g_base[g_len] == '-')
 			return (0);
-		chk[g_base[g_len++]] = 1;
+		chk[(int)g_base[g_len++]] = 1;
 	}
 	return (1);
 }
 
 void	ft_putnbr_base(int nbr, char *base)
 {
-	long tmp;
+	long long tmp;
 
 	g_base = base;
 	if (!ft_get_len() || g_len == 0 || g_len == 1)
@@ -57,5 +57,5 @@ void	ft_putnbr_base(int nbr, char *base)
 		write(1, "-", 1);
 	}
 	ft_print_num(tmp / g_len);
-	write(1, &g_base[nbr % g_len], 1);
+	write(1, &g_base[tmp % g_len], 1);
 }
