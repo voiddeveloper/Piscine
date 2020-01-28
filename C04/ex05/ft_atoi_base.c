@@ -5,27 +5,10 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/27 16:54:36 by gicho             #+#    #+#             */
-/*   Updated: 2020/01/27 22:10:25 by gicho            ###   ########.fr       */
+/*   Created: 2020/01/28 11:04:16 by gicho             #+#    #+#             */
+/*   Updated: 2020/01/28 11:04:55 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
- $> diff -U 3 user_output_test1 test1.output | cat -e
---- user_output_test1   2020-01-27 12:46:49.000000000 +0000$
-+++ test1.output        2020-01-27 12:46:48.000000000 +0000$
-@@ -22,7 +22,7 @@$
- 0$
- 0$
- 0$
--142$
-+0$
- -4096$
- -15$
- Diff KO :(
-Grade: 0
-수정 전 .... 수정해야함 
- */
-
 
 #include <unistd.h>
 
@@ -46,7 +29,8 @@ int		ft_get_len(void)
 		if (chk[(int)g_base[g_len]] ||
 			g_base[g_len] == '+' ||
 			g_base[g_len] == '-' ||
-			g_base[g_len] == ' ')
+			g_base[g_len] == ' ' ||
+			('\t' <= g_base[g_len] && g_base[g_len] <= '\r'))
 			return (0);
 		chk[(int)g_base[g_len++]] = 1;
 	}
@@ -78,8 +62,7 @@ int		ft_atoi_base(char *str, char *base)
 		return (0);
 	ret = 0;
 	sign = 1;
-	while (*str == '\t' || *str == '\n' || *str == '\v'
-			|| *str == '\f' || *str == '\r' || *str == ' ')
+	while (('\t' <= *str && *str <= '\r') || *str == ' ')
 		++str;
 	while (*str == '+' || *str == '-')
 		if (*(str++) == '-')
