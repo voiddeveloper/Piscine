@@ -6,13 +6,13 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/29 10:30:28 by gicho             #+#    #+#             */
-/*   Updated: 2020/01/29 10:54:07 by gicho            ###   ########.fr       */
+/*   Updated: 2020/01/29 14:11:11 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_is_prime(int nb)
 {
-	unsigned int i;
+	long long i;
 
 	if (nb <= 1)
 		return (0);
