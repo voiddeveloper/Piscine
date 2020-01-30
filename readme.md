@@ -2,7 +2,6 @@
 
 ## Shell00
 
-[subject](Shell00)
 [Exercise 00 : Z](Shell00/ex00)
 [Exercise 01 : testShell00](Shell00/ex01)
 [Exercise 02 : Oh yeah, mooore...](Shell00/ex02)
