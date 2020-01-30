@@ -6,14 +6,14 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/27 16:23:08 by gicho             #+#    #+#             */
-/*   Updated: 2020/01/27 20:07:36 by gicho            ###   ########.fr       */
+/*   Updated: 2020/01/27 21:15:48 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char *g_base;
-long long g_len;
+char	*g_base;
+int		g_len;
 
 void	ft_print_num(int nbr)
 {
