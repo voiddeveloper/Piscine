@@ -2,6 +2,8 @@
 
 ## Shell00
 
+[Subject](Shell00/ko.subject.pdf)
+
 [Exercise 00 : Z](Shell00/ex00)
 
 [Exercise 01 : testShell00](Shell00/ex01)
