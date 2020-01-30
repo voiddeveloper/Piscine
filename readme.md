@@ -3,22 +3,21 @@
 ## Shell00
 
 [Exercise 00 : Z](Shell00/ex00)
+[Exercise 01 : testShell00](Shell00/ex01)
 
-Exercise 01 : testShell00
+[Exercise 02 : Oh yeah, mooore...](Shell00/ex02)
 
-Exercise 02 : Oh yeah, mooore...
+[Exercise 03 : Connect me!](Shell00/ex03)
 
-Exercise 03 : Connect me!
+[Exercise 04 : midLS](Shell00/ex04)
 
-Exercise 04 : midLS
+[Exercise 05 : GiT commit](Shell00/ex05)
 
-Exercise 05 : GiT commit
+[Exercise 06 : gitignore](Shell00/ex06)
 
-Exercise 06 : gitignore
+[Exercise 07 : dif](Shell00/ex07)
 
-Exercise 07 : dif
+[Exercise 08 : clean](Shell00/ex08)
 
-Exercise 08 : clean
-
-Exercise 09 : Illusions, not tricks, Michael...
+[Exercise 09 : Illusions, not tricks, Michael...](Shell00/ex09)
 
