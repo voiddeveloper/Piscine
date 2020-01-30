@@ -2,7 +2,7 @@
 
 ## Shell00
 
-Exercise 00 : Z
+[Exercise 00 : Z](Shell00/ex00/z)
 
 Exercise 01 : testShell00
 
