@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/30 14:50:14 by gicho             #+#    #+#             */
-/*   Updated: 2020/01/30 15:12:22 by gicho            ###   ########.fr       */
+/*   Updated: 2020/01/30 18:01:07 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ char	*putnbr_b(int nbr, char *base, int base_len)
 	if (nbr == 0)
 	{
 		ret = (char*)malloc(2);
-		ret[0] = '0';
+		ret[0] = base[0];
 		ret[1] = 0;
 		return (ret);
 	}
