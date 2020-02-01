@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rush01.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/01 18:20:46 by gicho             #+#    #+#             */
+/*   Updated: 2020/02/01 18:21:56 by gicho            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
 int g_board[5][5];
@@ -43,7 +55,7 @@ int		is_valid_board(void)
 		ptr = g_start_ptr[i];
 		while (j < 4)
 		{
-			if(!check(ptr, g_offset[i][0], g_condition[con++]))
+			if (!check(ptr, g_offset[i][0], g_condition[con++]))
 				return (0);
 			ptr += g_offset[i][1];
 			++j;
@@ -76,8 +88,6 @@ void	print_board(void)
 		ft_putchar('\n');
 	}
 }
-
-
 
 int		fill_board(int r, int c)
 {
@@ -122,7 +132,8 @@ int		is_valid_condition(char *cond)
 	{
 		while (*cond && (*cond == ' ' || (9 <= *cond && *cond <= 13)))
 			++cond;
-		if (*cond){
+		if (*cond)
+		{
 			if ('1' <= *cond && *cond <= '4')
 			{
 				if (cnt == 16)
@@ -179,4 +190,3 @@ int		main(int argc, char *argv[])
 	rush();
 	return (0);
 }
-
