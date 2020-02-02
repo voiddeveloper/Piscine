@@ -6,11 +6,14 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/01 19:13:40 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/01 19:48:07 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/01 21:28:39 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef UNISTD_H
+# define UNISTD_H
+# include <unistd.h>
+#endif
 
 int		is_valid_condition(char *cond);
 int		rush(void);
