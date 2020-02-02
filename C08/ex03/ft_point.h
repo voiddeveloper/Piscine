@@ -6,12 +6,11 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 15:24:32 by gicho             #+#    #+#             */
-/*   Updated: 2020/01/31 15:28:00 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/02 15:57:35 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_POINT_H
-
 # define FT_POINT_H
 
 typedef	struct	s_point

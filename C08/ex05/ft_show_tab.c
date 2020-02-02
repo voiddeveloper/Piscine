@@ -6,11 +6,12 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 16:21:17 by gicho             #+#    #+#             */
-/*   Updated: 2020/01/31 16:21:42 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/02 16:28:39 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "ft_stock_str.h"
 
 void	print_size(int size)
 {

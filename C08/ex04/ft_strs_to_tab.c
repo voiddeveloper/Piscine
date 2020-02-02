@@ -6,11 +6,12 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 15:29:10 by gicho             #+#    #+#             */
-/*   Updated: 2020/01/31 16:20:50 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/02 16:02:43 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "ft_stock_str.h"
 
 int					get_str_size(char *str)
 {

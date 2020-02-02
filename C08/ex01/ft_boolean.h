@@ -6,12 +6,11 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 14:58:23 by gicho             #+#    #+#             */
-/*   Updated: 2020/01/31 15:18:17 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/02 15:50:10 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_BOOLEAN_H
-
 # define FT_BOOLEAN_H
 
 # include <unistd.h>
