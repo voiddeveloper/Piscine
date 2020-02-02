@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 16:21:17 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/02 16:28:39 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/02 18:26:26 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,10 @@ void	print_size(int size)
 	char c;
 
 	if (!size)
+	{
+		write(1, "0", 1);
 		return ;
+	}
 	c = '0' + size % 10;
 	print_size(size / 10);
 	write(1, &c, 1);
