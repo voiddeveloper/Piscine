@@ -1,5 +1,7 @@
 ### 42 Korea Piscine
 
+틀린 코드는 커밋하지 않는다.
+
 ## Shell00
 
 [ko.subject.pdf](Shell00/ko.subject.pdf)
