@@ -206,6 +206,18 @@
 [Exercise 05 : ft_split](C07/ex05)
 
 
+## C08
 
+[ko.subject.pdf](C08/ko.subject.pdf)
 
+[Exercise 00 : ft.h](C08/ex00)
 
+[Exercise 01 : ft_boolean.h](C08/ex01)
+
+[Exercise 02 : ft_abs.h](C08/ex02)
+
+[Exercise 03 : ft_point.h](C08/ex03)
+
+[Exercise 04 : ft_strs_to_tab](C08/ex04)
+
+[Exercise 05 : ft_show_tab](C08/ex05)
