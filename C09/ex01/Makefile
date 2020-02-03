@@ -3,7 +3,6 @@ CFLAGS = -Wall -Wextra -Werror -c
 
 SRCDIR = srcs
 INCDIR = includes
-OBJDIR = srcs
 
 TARGET = libft.a
 SOURCES = $(SRCDIR)/ft_putchar.c $(SRCDIR)/ft_swap.c $(SRCDIR)/ft_putstr.c $(SRCDIR)/ft_strlen.c $(SRCDIR)/ft_strcmp.c
