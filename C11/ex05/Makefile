@@ -1,9 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
-SRCDIR = srcs
-INCDIR = includes
-
 TARGET = do-op
 SOURCES = $(wildcard *.c)
 OBJECTS = $(SOURCES:.c=.o)
@@ -11,7 +8,7 @@ OBJECTS = $(SOURCES:.c=.o)
 all: $(TARGET)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@ -I $(INCDIR)
+	$(CC) $(CFLAGS) -c $<
 
 $(TARGET): $(OBJECTS)
 	$(CC) $(CFLAGS) -o $@ $^
