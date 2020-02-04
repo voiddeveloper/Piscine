@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/03 22:26:52 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/04 22:34:49 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/04 22:39:06 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_is_sort(int *tab, int length, int (*f)(int, int))
 			continue;
 		if (k == 0)
 			k = tmp;
-		else if ((long long)k * tmp < 0)
+		else if ((k < 0 && tmp > 0) || (k > 0 && tmp < 0))
 			return (0);
 	}
 	return (1);
