@@ -4,7 +4,7 @@ SOURCES = $(wildcard *.c)
 all: $(TARGET)
 
 $(TARGET): $(SOURCES)
-	gcc -o $@ $^
+	gcc -Wall -Wextra -Werror -o $@ $^
 
 clean:
 	rm -f $(TARGET)

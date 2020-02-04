@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/04 16:46:56 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/04 17:52:58 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/04 20:47:28 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,8 @@ int		main(int argc, char *argv[])
 		return (0);
 	}
 	if (val2 == 0 && (op == '/' || op == '%'))
-		ft_putstr(g_err_msg[g_op_idx[op]]);
+		ft_putstr(g_err_msg[g_op_idx[(int)op]]);
 	else
-		ft_putnbr(g_f[(int)g_op_idx[op]](val1, val2));
+		ft_putnbr(g_f[g_op_idx[(int)op]](val1, val2));
 	return (0);
 }

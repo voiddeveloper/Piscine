@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/03 22:24:43 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/03 22:26:32 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/04 20:25:54 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,8 @@ int	ft_count_if(char **tab, int length, int (*f)(char*))
 	int cnt;
 
 	cnt = 0;
-	while (*tab)
-	{
-		if (f(*tab) != 0)
+	while (length--)
+		if (f(tab[length]) != 0)
 			++cnt;
-		++tab;
-	}
 	return (cnt);
 }
