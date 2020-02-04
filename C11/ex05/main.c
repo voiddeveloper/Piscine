@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/04 16:46:56 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/04 16:51:59 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/04 17:52:58 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int		main(int argc, char *argv[])
 	int		val1;
 	int		val2;
 	char	op;
-	
+
 	init();
 	if (argc != 4)
 		return (0);
@@ -60,4 +60,3 @@ int		main(int argc, char *argv[])
 		ft_putnbr(g_f[(int)g_op_idx[op]](val1, val2));
 	return (0);
 }
-
