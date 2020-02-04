@@ -5,7 +5,7 @@ SOURCES = main.c
 all: $(TARGET)
 
 $(TARGET): $(SOURCES)
-	gcc -o $@ $^
+	gcc -Wall -Wextra -Werror -o $@ $^
 
 clean:
 	rm $(TARGET)
