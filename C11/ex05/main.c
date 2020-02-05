@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/04 16:46:56 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/05 17:47:34 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/05 17:54:58 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int		main(int argc, char *argv[])
 	op = argv[2][0];
 	if (argv[2][1] || !is_valid_operator(op))
 	{
-		ft_putstr("0");
+		ft_putstr("0\n");
 		return (0);
 	}
 	val1 = ft_atoi(argv[1]);
