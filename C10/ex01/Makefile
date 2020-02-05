@@ -1,13 +1,12 @@
 CFLAGS = -Wall -Wextra -Werror
-
-TARGET = ft_display_file
-SOURCES = main.c 
+TARGET = ft_cat
+SOURCES = main.c
 OBJECTS = $(SOURCES:.c=.o)
-
-all: $(TARGET)
 
 %.o: %.c
 	gcc $(CFLAGS) -c $<
+
+all: $(TARGET)
 
 $(TARGET): $(OBJECTS)
 	gcc $(CFLAGS) -o $@ $^
@@ -15,7 +14,7 @@ $(TARGET): $(OBJECTS)
 clean:
 	rm -f $(OBJECTS)
 
-fclean: clean
+fclean:
 	rm -f $(TARGET)
 
 re: fclean all
