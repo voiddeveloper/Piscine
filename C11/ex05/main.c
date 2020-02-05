@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/04 16:46:56 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/04 20:47:28 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/05 17:47:34 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ void	init(void)
 	g_f[2] = sum;
 	g_f[3] = sub;
 	g_f[4] = mul;
-	g_err_msg[0] = "Stop : division by zero\n";
-	g_err_msg[1] = "Stop : modulo by zero\n";
+	g_err_msg[0] = "Stop : division by zero";
+	g_err_msg[1] = "Stop : modulo by zero";
 }
 
 int		is_valid_operator(char op)
@@ -46,17 +46,18 @@ int		main(int argc, char *argv[])
 	init();
 	if (argc != 4)
 		return (0);
-	val1 = ft_atoi(argv[1]);
 	op = argv[2][0];
-	val2 = ft_atoi(argv[3]);
-	if (!is_valid_operator(op))
+	if (argv[2][1] || !is_valid_operator(op))
 	{
 		ft_putstr("0");
 		return (0);
 	}
+	val1 = ft_atoi(argv[1]);
+	val2 = ft_atoi(argv[3]);
 	if (val2 == 0 && (op == '/' || op == '%'))
 		ft_putstr(g_err_msg[g_op_idx[(int)op]]);
 	else
 		ft_putnbr(g_f[g_op_idx[(int)op]](val1, val2));
+	ft_putstr("\n");
 	return (0);
 }
