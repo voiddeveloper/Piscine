@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/05 22:19:59 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/05 22:27:21 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/05 22:59:51 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	print_error_msg(char *file)
 	ft_putstr(": ");
 	ft_putstr(strerror(errno));
 	ft_putstr("\n");
+	errno = 0;
 }
 
 void	display_file(int fd, char *file)
