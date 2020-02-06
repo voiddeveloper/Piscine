@@ -1,4 +1,4 @@
-### 42 Seoul Piscine
+# 42 Seoul Piscine
 
 틀린 코드는 커밋하지 않는다.
 
