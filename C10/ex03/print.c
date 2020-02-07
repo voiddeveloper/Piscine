@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/08 00:29:01 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/08 00:32:32 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/08 00:47:15 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,12 @@ void	print(void)
 	else
 	{
 		g_duplicated = 0;
-		print_row(g_offset, g_cnt);
+		print_input_offset(7, g_offset);
+		print_hexadecimal_bytes(g_buf, 8 * (g_cnt / 8) + g_cnt);
+		print_hexadecimal_bytes(g_buf + 8, g_cnt - 8);
+		if (g_is_on_flag_c)
+			print_characters(g_buf, g_cnt);
+		ft_putchar('\n');
 		free(g_buf_prev);
 		g_buf_prev = g_buf;
 		g_buf = (char*)malloc(17);
@@ -94,14 +99,4 @@ void	print_error_msg(char *file)
 	ft_putstr(strerror(errno));
 	ft_putchar('\n');
 	errno = 0;
-}
-
-void	print_row(int offset, int i)
-{
-	print_input_offset(7, offset);
-	print_hexadecimal_bytes(g_buf, 8 * (i / 8) + i);
-	print_hexadecimal_bytes(g_buf + 8, i - 8);
-	if (g_is_on_flag_c)
-		print_characters(g_buf, i);
-	ft_putchar('\n');
 }

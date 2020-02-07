@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/08 00:26:14 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/08 00:32:49 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/08 00:52:14 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,14 @@ int		main(int argc, char *argv[])
 	if (g_last_lines)
 	{
 		if (g_cnt)
-			print_row(g_offset, g_cnt);
+		{
+			print_input_offset(7, g_offset);
+			print_hexadecimal_bytes(g_buf, 8 * (g_cnt / 8) + g_cnt);
+			print_hexadecimal_bytes(g_buf + 8, g_cnt - 8);
+			if (g_is_on_flag_c)
+				print_characters(g_buf, g_cnt);
+			ft_putchar('\n');
+		}
 		print_input_offset(7, g_offset + g_cnt);
 		ft_putchar('\n');
 	}

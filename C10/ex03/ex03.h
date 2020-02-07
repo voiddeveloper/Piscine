@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/08 00:30:20 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/08 00:40:06 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/08 00:47:28 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,8 @@ void	print_input_offset(int n, int offset);
 void	print_hexadecimal_bytes(char *str, int size);
 void	print_characters(char *str, int len);
 void	print_error_msg(char *file);
-void	print_row(int offset, int i);
 int		is_flag_c(char *str);
 void	print(void);
 int		ft_is_equal(char *a, char *b);
-
 
 #endif
