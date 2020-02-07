@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   print.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/08 00:29:01 by gicho             #+#    #+#             */
+/*   Updated: 2020/02/08 00:29:33 by gicho            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ex03.h"
 
-void    print_input_offset(int n, int offset)
+void	print_input_offset(int n, int offset)
 {
 	if (!offset)
 	{
 		n += g_is_on_flag_c;
-		while(n--)
+		while (n--)
 			ft_putchar('0');
 		return ;
 	}
@@ -13,7 +25,7 @@ void    print_input_offset(int n, int offset)
 	ft_putchar(g_hex[(offset & 15)]);
 }
 
-void    print_hexadecimal_bytes(char *str, int size)
+void	print_hexadecimal_bytes(char *str, int size)
 {
 	int i;
 	int tmp;
@@ -33,10 +45,10 @@ void    print_hexadecimal_bytes(char *str, int size)
 		ft_putstr("   ");
 }
 
-void    print_characters(char *str, int len)
+void	print_characters(char *str, int len)
 {
 	int i;
-	
+
 	ft_putstr("  |");
 	i = 0;
 	while (i < len)
@@ -50,7 +62,7 @@ void    print_characters(char *str, int len)
 	ft_putchar('|');
 }
 
-void    print_error_msg(char *file)
+void	print_error_msg(char *file)
 {
 	ft_putstr(basename(g_prog));
 	ft_putstr(": ");
@@ -61,7 +73,7 @@ void    print_error_msg(char *file)
 	errno = 0;
 }
 
-void    print_row(int offset, int i)
+void	print_row(int offset, int i)
 {
 	print_input_offset(7, offset);
 	print_hexadecimal_bytes(g_buf, 8 * (i / 8) + i);
