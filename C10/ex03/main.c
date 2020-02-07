@@ -8,8 +8,6 @@
 char    *g_prog;
 char    *g_hex;
 char    g_buf[17];
-int     *g_fd;
-int     g_fd_cnt;
 
 int        is_printable(unsigned char c)
 {
@@ -116,10 +114,46 @@ void    hexdump_stdin()
     ft_putchar('\n');
 }
 
+void    hexdump_files(int argc, char *argv[])
+{
+    int offset;
+    int i;
+    int j;
+    int fd;
+
+    offset = 0;
+    i = 1;
+    j = 0;
+    while (++i < argc)
+    {
+        if ((fd = open(argv[i], O_RDONLY)) == -1)
+        {
+            print_error_msg(argv[i]);
+            continue;
+        }
+        while (read(fd, &g_buf[j], 1))
+        {
+            if (errno)
+            {
+                print_error_msg(argv[i]);
+                break ;
+            }
+            if (++j == 16)
+            {
+                print_row(offset, j);
+                offset += 16;
+                j = 0;
+            }
+        }
+    }
+    if (j)
+        print_row(offset, j);
+    print_input_offset(8, offset + j);
+    ft_putchar('\n');
+}
+
 int main(int argc, char *argv[])
 {
-    int i;
-    
     g_prog = argv[0];
     g_hex = "0123456789abcdef";
     g_buf[16] = 0;
@@ -127,27 +161,11 @@ int main(int argc, char *argv[])
     if (argc == 2)
     {
         hexdump_stdin();
-        return (0);
     }
-    
-    g_fd = (int*)malloc(sizeof(int) * (argc - 2));
-    i = 1;
-    g_fd_cnt = 0;
-    while (++i < argc)
+    else
     {
-        g_fd[g_fd_cnt] = open(argv[i], O_RDONLY);
-        if (g_fd[g_fd_cnt] == -1)
-        {
-            print_error_msg(argv[i]);
-            continue;
-        }
-        ++g_fd_cnt;
+        hexdump_files(argc, argv);
     }
-    
-    free(g_fd);
-    
-    
-    
     return (0);
 }
 
