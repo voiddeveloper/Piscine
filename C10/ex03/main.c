@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/08 00:26:14 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/08 00:31:11 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/08 00:32:49 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,29 +31,6 @@ int		ft_is_equal(char *a, char *b)
 		if (a[i] != b[i])
 			return (0);
 	return (1);
-}
-
-void	print(void)
-{
-	g_last_lines = 1;
-	if (ft_is_equal(g_buf, g_buf_prev))
-	{
-		if (!g_duplicated)
-		{
-			g_duplicated = 1;
-			ft_putstr("*\n");
-		}
-	}
-	else
-	{
-		g_duplicated = 0;
-		print_row(g_offset, g_cnt);
-		free(g_buf_prev);
-		g_buf_prev = g_buf;
-		g_buf = (char*)malloc(17);
-	}
-	g_offset += 16;
-	g_cnt = 0;
 }
 
 void	hexdump_stdin(void)
