@@ -232,3 +232,37 @@
 [Exercise 01 : Makefile](C09/ex01)
 
 [Exercise 02 : ft_split](C09/ex02)
+
+## C10
+
+[ko.subject.pdf](C10/ko.subject.pdf)
+
+[Exercise 00 : display_file](C10/ex00)
+
+[Exercise 01 : cat](C10/ex01)
+
+[Exercise 02 : tail](C10/ex02)
+
+[Exercise 03 : hexdump](C10/ex03)
+
+
+## C11
+
+[ko.subject.pdf](C11/ko.subject.pdf)
+
+[Exercise 00 : ft_foreach](C11/ex00)
+
+[Exercise 01 : ft_map](C11/ex01)
+
+[Exercise 02 : ft_any](C11/ex02)
+
+[Exercise 03 : ft_count_if](C11/ex03)
+
+[Exercise 04 : ft_is_sort](C11/ex04)
+
+[Exercise 05 : do-op](C11/ex05)
+
+[Exercise 06 : ft_sort_string_tab](C11/ex06)
+
+[Exercise 07 : ft_advanced_sort_string_tab](C11/ex07)
+
