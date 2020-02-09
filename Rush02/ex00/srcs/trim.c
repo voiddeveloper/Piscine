@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/09 18:59:02 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/09 18:59:04 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/09 21:32:08 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,10 @@ char	*trim_side(char *str)
 	ft_strcpy(ret, begin, end);
 	return (ret);
 }
+
+/*
+** remove white-space of the side of the string argument
+*/
 
 char	*trim_allocated_str(char *str)
 {

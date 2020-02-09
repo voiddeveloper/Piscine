@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/09 19:23:44 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/09 20:38:27 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/09 21:30:10 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,10 @@ int g_is_first;
 char *g_num;
 int g_unit3;
 int g_unit2;
+
+/*
+** make string for printing unit
+*/
 
 char	*build_unit_str(int cnt)
 {
@@ -106,6 +110,10 @@ void	convert_num(char *num)
 	}
 	ft_putstr("\n");
 }
+
+/*
+** check exception and convert number to string using dictionary if no error.
+*/
 
 void	rush(int argc, char *argv[])
 {

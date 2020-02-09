@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/09 19:07:42 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/09 19:07:44 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/09 21:33:29 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,10 @@ void	insert_key_value(char *str)
 	free(tmp);
 	push_front(key, val);
 }
+
+/*
+** make linked list of dictionary data for converting input number
+*/
 
 void	build_dict(char *file)
 {

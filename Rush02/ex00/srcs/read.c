@@ -6,11 +6,16 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/09 19:17:00 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/09 19:17:01 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/09 21:36:34 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rush02.h"
+
+/*
+** read line of the dictionary reference file and check if the pair of key and
+** value is valid.
+*/
 
 char	*read_line(int fd)
 {
@@ -38,6 +43,10 @@ char	*read_line(int fd)
 	}
 	return (ret);
 }
+
+/*
+** read standard entry
+*/
 
 char	*read_num(void)
 {
