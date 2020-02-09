@@ -1,22 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list.h                                          :+:      :+:    :+:   */
+/*   ft_list_reverse_fun.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/08 01:22:34 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/09 21:40:32 by gicho            ###   ########.fr       */
+/*   Created: 2020/02/09 22:43:37 by gicho             #+#    #+#             */
+/*   Updated: 2020/02/09 22:44:13 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LIST_H
-# define FT_LIST_H
+#include "ft_list.h"
 
-typedef struct		s_list
+void	ft_list_reverse_fun(t_list *begin_list)
 {
-	struct s_list	*next;
-	void			*data;
-}					t_list;
+	t_list	*begin;
+	t_list	*end;
+	void	*tmp;
 
-#endif
+	end = 0;
+	while (begin_list != end)
+	{
+		begin = begin_list;
+		while (begin->next != end)
+		{
+			tmp = begin->data;
+			begin->data = begin->next->data;
+			begin->next->data = tmp;
+			begin = begin->next;
+		}
+		end = begin;
+	}
+}

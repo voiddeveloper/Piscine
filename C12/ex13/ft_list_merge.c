@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list.h                                          :+:      :+:    :+:   */
+/*   ft_list_merge.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/08 01:22:34 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/09 21:40:32 by gicho            ###   ########.fr       */
+/*   Created: 2020/02/09 21:40:23 by gicho             #+#    #+#             */
+/*   Updated: 2020/02/09 21:47:04 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LIST_H
-# define FT_LIST_H
+#include "ft_list.h"
 
-typedef struct		s_list
+void	ft_list_merge(t_list **begin_list1, t_list *begin_list2)
 {
-	struct s_list	*next;
-	void			*data;
-}					t_list;
+	t_list *ptr;
 
-#endif
+	ptr = *begin_list1;
+	if (!ptr)
+	{
+		*begin_list1 = begin_list2;
+		return ;
+	}
+	while (ptr->next)
+		ptr = ptr->next;
+	ptr->next = begin_list2;
+}
