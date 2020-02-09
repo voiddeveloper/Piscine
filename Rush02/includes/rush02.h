@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/09 18:08:03 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/09 20:19:46 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/09 20:33:54 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 # define DEFAULT_DICT_FILE "dictionary/default.dict"
 # define MAX_LINE_WIDTH 1024
 # define MAX_INPUT_NUM_LEN 1024
+# define VALID_NUM_LEN 39
 
 typedef struct		s_dict
 {

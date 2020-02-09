@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/09 19:23:44 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/09 19:23:45 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/09 20:38:27 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,6 +127,11 @@ void	rush(int argc, char *argv[])
 	if (!g_input_num_error && !ft_is_valid_num(g_num))
 		print_error_msg(INPUT_NUM_ERR_MSG);
 	else if (!g_input_num_error && !g_dict_error)
-		convert_num(g_num);
+	{
+		if (ft_strlen(g_num) > VALID_NUM_LEN)
+			print_error_msg("Too large number!");
+		else
+			convert_num(g_num);
+	}
 	free(g_num);
 }
