@@ -2,7 +2,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 SRCDIR = srcs
 INCDIR = includes
-TARGET = bsq
+TARGET = BSQ
 SRCS = $(wildcard $(SRCDIR)/*.c)
 OBJS = $(SRCS:.c=.o)
 
