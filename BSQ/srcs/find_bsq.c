@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   find_bsq.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jeonkim <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/10 20:43:22 by jeonkim           #+#    #+#             */
-/*   Updated: 2020/02/10 20:58:28 by jeonkim          ###   ########.fr       */
+/*   Created: 2020/02/11 19:26:07 by gicho             #+#    #+#             */
+/*   Updated: 2020/02/11 19:26:08 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,13 @@ int			**make_arr(t_map *map)
 	int		j;
 	int		**buf;
 
-	buf = (int**)malloc(sizeof(int *) * (map->y_len));
+	if (!(buf = (int**)malloc(sizeof(int *) * (map->y_len))))
+		exit(0);
 	i = -1;
 	while (++i < map->y_len)
 	{
-		buf[i] = (int *)malloc(sizeof(int) * (map->x_len));
+		if (!(buf[i] = (int *)malloc(sizeof(int) * (map->x_len))))
+			exit(0);
 		j = -1;
 		while (++j < map->x_len)
 		{
@@ -76,7 +78,8 @@ t_square	*find_bsq(t_map *map)
 	int			**arr;
 	t_square	*square;
 
-	square = (t_square*)malloc(sizeof(t_square));
+	if (!(square = (t_square*)malloc(sizeof(t_square))))
+		exit(0);
 	arr = make_arr(map);
 	change_square(square, -1, -1, 0);
 	i = -1;

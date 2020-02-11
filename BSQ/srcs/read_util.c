@@ -5,19 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/10 22:33:48 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/10 22:33:49 by gicho            ###   ########.fr       */
+/*   Created: 2020/02/11 19:27:06 by gicho             #+#    #+#             */
+/*   Updated: 2020/02/11 19:27:06 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "bsq.h"
 
-char	*expand_size(char *src, int size)
+char	*expand_size(char *src, int *size)
 {
 	char *ret;
 
-	ret = (char*)malloc(size << 1);
-	ft_strncpy(ret, src, size);
+	if (!(ret = (char*)malloc(*size << 1)))
+		exit(0);
+	ft_strncpy(ret, src, *size);
+	*size <<= 1;
 	free(src);
 	return (ret);
 }

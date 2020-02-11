@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/10 22:42:13 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/10 22:42:14 by gicho            ###   ########.fr       */
+/*   Created: 2020/02/11 19:27:19 by gicho             #+#    #+#             */
+/*   Updated: 2020/02/11 19:46:15 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,9 @@ void	bsq(char *file)
 	if (!square->len)
 		ft_putstr(ERR_MSG);
 	else
-		print(map, find_bsq(map));
-	free(map);
+		print(map, square);
+	free_map(map, map->y_len);
+	free(square);
 }
 
 int		main(int argc, char *argv[])

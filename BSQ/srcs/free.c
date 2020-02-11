@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free.c                                          :+:      :+:    :+:   */
+/*   free.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jeonkim <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/10 20:46:33 by jeonkim           #+#    #+#             */
-/*   Updated: 2020/02/10 20:58:01 by jeonkim          ###   ########.fr       */
+/*   Created: 2020/02/11 19:26:53 by gicho             #+#    #+#             */
+/*   Updated: 2020/02/11 19:26:54 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "bsq.h"
 
-void	free_map(t_map *map)
+void	free_map(t_map *map, int size)
 {
 	int		i;
 
 	i = -1;
-	while (++i < map->y_len)
+	while (++i < size)
 		free(map->arr[i]);
 	free(map->arr);
+	free(map);
 }

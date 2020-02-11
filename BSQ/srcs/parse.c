@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/10 22:33:32 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/10 22:33:33 by gicho            ###   ########.fr       */
+/*   Created: 2020/02/11 19:26:13 by gicho             #+#    #+#             */
+/*   Updated: 2020/02/11 19:26:14 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,11 @@
 
 int		parse_map_info(t_map *map, char *info)
 {
-	int len;
+	int ret;
 
-	if (!info || (len = ft_strlen(info)) < 4)
-		return (0);
-	map->full = info[len - 1];
-	map->obstacle = info[len - 2];
-	map->empty = info[len - 3];
-	if (map->empty == map->obstacle ||
-		map->empty == map->full ||
-		map->obstacle == map->full)
-		return (0);
-	info[len - 3] = 0;
-	if (!(map->y_len = ft_atoi(info)))
-		return (0);
-	return (1);
+	ret = parse_map_info_sub(map, info);
+	free(info);
+	return (ret);
 }
 
 char	*read_line(int fd)
@@ -40,7 +30,8 @@ char	*read_line(int fd)
 
 	idx = 0;
 	size = 2;
-	line = (char*)malloc(size);
+	if (!(line = (char*)malloc(size)))
+		exit(0);
 	while (read(fd, &c, 1))
 	{
 		if (c == '\n')
@@ -49,14 +40,11 @@ char	*read_line(int fd)
 			break ;
 		}
 		if (idx + 1 == size)
-		{
-			line = expand_size(line, size);
-			size <<= 1;
-		}
+			line = expand_size(line, &size);
 		line[idx++] = c;
 	}
 	if (idx == 0)
-		return (0);
+		return (free_line(line));
 	return (line);
 }
 
@@ -66,26 +54,26 @@ t_map	*read_map(int fd, int stdin)
 	int		idx;
 	t_map	*map;
 
-	map = (t_map*)malloc(sizeof(t_map));
+	if (!(map = (t_map*)malloc(sizeof(t_map))))
+		exit(0);
 	if (!parse_map_info(map, read_line(fd)))
 		return (0);
-	map->arr = (char**)malloc(sizeof(char*) * map->y_len);
+	if (!(map->arr = (char**)malloc(sizeof(char*) * map->y_len)))
+		exit(0);
 	idx = 0;
 	map->x_len = 0;
 	while ((line = read_line(fd)))
 	{
-		if (idx == map->y_len || !ft_is_valid_map(line, map))
+		if (!read_map_sub(&idx, map, line))
 			return (0);
-		if (map->x_len == 0)
-			map->x_len = ft_strlen(line);
-		if (ft_strlen(line) != map->x_len)
-			return (0);
-		map->arr[idx++] = line;
 		if (stdin && (idx == map->y_len))
 			break ;
 	}
 	if (idx != map->y_len)
+	{
+		free_map(map, idx);
 		return (0);
+	}
 	return (map);
 }
 
