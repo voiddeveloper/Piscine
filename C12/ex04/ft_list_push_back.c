@@ -6,21 +6,11 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/08 06:18:23 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/08 08:11:20 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/11 20:19:55 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
-
-t_list	*ft_create_elem(void *data)
-{
-	t_list *ret;
-
-	ret = (t_list*)malloc(sizeof(t_list));
-	ret->data = data;
-	ret->next = 0;
-	return (ret);
-}
 
 void	ft_list_push_back(t_list **begin_list, void *data)
 {
