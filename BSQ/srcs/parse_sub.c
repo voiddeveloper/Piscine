@@ -6,11 +6,23 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 19:28:04 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/11 19:28:05 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/12 22:15:33 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "bsq.h"
+
+int		is_printable(char c)
+{
+	return (' ' <= c && c <= '~');
+}
+
+int		is_valid_map_info(t_map *map)
+{
+	return (is_printable(map->full) &&
+			is_printable(map->obstacle) &&
+			is_printable(map->empty));
+}
 
 int		parse_map_info_sub(t_map *map, char *info)
 {
@@ -23,7 +35,8 @@ int		parse_map_info_sub(t_map *map, char *info)
 	map->empty = info[len - 3];
 	if (map->empty == map->obstacle ||
 		map->empty == map->full ||
-		map->obstacle == map->full)
+		map->obstacle == map->full ||
+		!is_valid_map_info(map))
 		return (0);
 	info[len - 3] = 0;
 	if (!(map->y_len = ft_atoi(info)))

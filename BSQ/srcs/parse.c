@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 19:26:13 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/11 19:26:14 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/12 22:17:33 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ t_map	*read_map(int fd, int stdin)
 	int		idx;
 	t_map	*map;
 
+	stdin = 0;
 	if (!(map = (t_map*)malloc(sizeof(t_map))))
 		exit(0);
 	if (!parse_map_info(map, read_line(fd)))
@@ -63,12 +64,8 @@ t_map	*read_map(int fd, int stdin)
 	idx = 0;
 	map->x_len = 0;
 	while ((line = read_line(fd)))
-	{
 		if (!read_map_sub(&idx, map, line))
 			return (0);
-		if (stdin && (idx == map->y_len))
-			break ;
-	}
 	if (idx != map->y_len)
 	{
 		free_map(map, idx);
