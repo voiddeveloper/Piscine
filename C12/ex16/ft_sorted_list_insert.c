@@ -6,9 +6,11 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 23:29:12 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/12 11:32:14 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/12 14:55:42 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_list.h"
 
 void	ft_sorted_list_insert(t_list **begin_list, void *data, int (*cmp)())
 {
