@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 19:26:13 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/12 22:17:33 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/12 23:27:23 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int		parse_map_info(t_map *map, char *info)
 	int ret;
 
 	ret = parse_map_info_sub(map, info);
+	if (!ret)
+		free(map);
 	free(info);
 	return (ret);
 }
