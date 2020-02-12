@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 11:33:27 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/12 14:55:54 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/12 17:09:08 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,22 @@ void	init(t_list *begin_list1, t_list *begin_list2, int (*cmp)())
 	g_tmp = g_head;
 }
 
+int		is_null(t_list **begin_list1, t_list *begin_list2)
+{
+	if (!begin_list2)
+		return (1);
+	if (!*begin_list1)
+	{
+		*begin_list1 = begin_list2;
+		return (1);
+	}
+	return (0);
+}
+
 void	ft_sorted_list_merge(t_list **begin_list1, t_list *begin_list2,
 		int (*cmp)())
 {
-	if (!*begin_list1 || !begin_list2)
+	if (is_null(begin_list1, begin_list2))
 		return ;
 	init(*begin_list1, begin_list2, cmp);
 	*begin_list1 = g_head;
