@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 12:38:16 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/13 12:38:40 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/13 16:57:41 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*btree_search_item(t_btree *root, void *data_ref, int (*cmpf)(void *,
 		return (ret);
 	if ((ret = btree_search_item(root->right, data_ref, cmpf)))
 		return (ret);
-	if (cmpf(root->item, data_ref) == 0)
+	if (cmpf(root->item, data_ref))
 		return (root->item);
 	return (0);
 }
