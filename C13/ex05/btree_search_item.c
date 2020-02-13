@@ -6,14 +6,14 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 12:38:16 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/13 16:57:41 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/13 19:04:49 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_btree.h"
 
-void	*btree_search_item(t_btree *root, void *data_ref, int (*cmpf)(void *,
-			void *))
+void *btree_search_item(t_btree *root, void *data_ref,
+		int (*cmpf)(void *, void *))
 {
 	void *ret;
 
@@ -21,9 +21,9 @@ void	*btree_search_item(t_btree *root, void *data_ref, int (*cmpf)(void *,
 		return (0);
 	if ((ret = btree_search_item(root->left, data_ref, cmpf)))
 		return (ret);
+	if (cmpf(root->item, data_ref) == 0)
+		return (root->item);
 	if ((ret = btree_search_item(root->right, data_ref, cmpf)))
 		return (ret);
-	if (cmpf(root->item, data_ref))
-		return (root->item);
 	return (0);
 }
