@@ -6,13 +6,13 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 12:38:16 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/13 19:04:49 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/13 19:09:44 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_btree.h"
 
-void *btree_search_item(t_btree *root, void *data_ref,
+void	*btree_search_item(t_btree *root, void *data_ref,
 		int (*cmpf)(void *, void *))
 {
 	void *ret;
