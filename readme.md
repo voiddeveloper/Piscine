@@ -32,6 +32,8 @@
 
 [ko.subject.pdf](Shell01/ko.subject.pdf)
 
+[en.subject.pdf](Shell01/en.subject.pdf)
+
 [Exercise 01 : print_groups](Shell01/ex01)
 
 [Exercise 02 : find_sh](Shell01/ex02)
@@ -74,6 +76,8 @@
 
 [ko.subject.pdf](C01/ko.subject.pdf)
 
+[en.subject.pdf](C01/en.subject.pdf)
+
 [Exercise 00 : ft_ft](C01/ex00)
 
 [Exercise 01 : ft_ultimate_ft](C01/ex01)
@@ -95,6 +99,8 @@
 ## C02
 
 [ko.subject.pdf](C02/ko.subject.pdf)
+
+[en.subject.pdf](C02/en.subject.pdf)
 
 [Exercise 00 : ft_strcpy](C02/ex00)
 
@@ -126,6 +132,8 @@
 
 [ko.subject.pdf](C03/ko.subject.pdf)
 
+[en.subject.pdf](C03/en.subject.pdf)
+
 [Exercise 00 : ft_strcmp](C03/ex00)
 
 [Exercise 01 : ft_strncmp](C03/ex01)
@@ -143,6 +151,8 @@
 
 [ko.subject.pdf](C04/ko.subject.pdf)
 
+[en.subject.pdf](C04/en.subject.pdf)
+
 [Exercise 00 : ft_strlen](C04/ex00)
 
 [Exercise 01 : ft_putstr](C04/ex01)
@@ -158,6 +168,8 @@
 ## C05
 
 [ko.subject.pdf](C05/ko.subject.pdf)
+
+[en.subject.pdf](C05/en.subject.pdf)
 
 [Exercise 00 : ft_iterative_factorial](C05/ex00)
 
@@ -181,6 +193,8 @@
 
 [ko.subject.pdf](C06/ko.subject.pdf)
 
+[en.subject.pdf](C06/en.subject.pdf)
+
 [Exercise 00 : ft_print_program_name](C06/ex00)
 
 [Exercise 01 : ft_print_params](C06/ex01)
@@ -194,6 +208,8 @@
 ## C07
 
 [ko.subject.pdf](C07/ko.subject.pdf)
+
+[en.subject.pdf](C07/en.subject.pdf)
 
 [Exercise 00 : ft_strdup](C07/ex00)
 
@@ -212,6 +228,8 @@
 
 [ko.subject.pdf](C08/ko.subject.pdf)
 
+[en.subject.pdf](C08/en.subject.pdf)
+
 [Exercise 00 : ft.h](C08/ex00)
 
 [Exercise 01 : ft_boolean.h](C08/ex01)
@@ -229,6 +247,8 @@
 
 [ko.subject.pdf](C09/ko.subject.pdf)
 
+[en.subject.pdf](C09/en.subject.pdf)
+
 [Exercise 00 : libft](C09/ex00)
 
 [Exercise 01 : Makefile](C09/ex01)
@@ -238,6 +258,8 @@
 ## C10
 
 [ko.subject.pdf](C10/ko.subject.pdf)
+
+[en.subject.pdf](C10/en.subject.pdf)
 
 [Exercise 00 : display_file](C10/ex00)
 
@@ -251,6 +273,8 @@
 ## C11
 
 [ko.subject.pdf](C11/ko.subject.pdf)
+
+[en.subject.pdf](C11/en.subject.pdf)
 
 [Exercise 00 : ft_foreach](C11/ex00)
 
@@ -272,6 +296,8 @@
 ## C12
 
 [ko.subject.pdf](C12/ko.subject.pdf)
+
+[en.subject.pdf](C12/en.subject.pdf)
 
 [Exercice 00 : ft_create_elem](C12/ex00)
 
@@ -313,6 +339,8 @@
 ## C13
 
 [ko.subject.pdf](C13/ko.subject.pdf)
+
+[en.subject.pdf](C13/en.subject.pdf)
 
 [Exercise 00 : btree_create_node](C13/ex00)
 
