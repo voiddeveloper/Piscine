@@ -266,3 +266,64 @@
 
 [Exercise 07 : ft_advanced_sort_string_tab](C11/ex07)
 
+
+## C12
+
+[ko.subject.pdf](C12/ko.subject.pdf)
+
+[Exercice 00 : ft_create_elem](C12/ex00)
+
+[Exercice 01 : ft_list_push_front](C12/ex01)
+
+[Exercice 02 : ft_list_size](C12/ex02)
+
+[Exercice 03 : ft_list_last](C12/ex03)
+
+[Exercice 04 : ft_list_push_back](C12/ex04)
+
+[Exercice 05 : ft_list_push_strs](C12/ex05)
+
+[Exercice 06 : ft_list_clear](C12/ex06)
+
+[Exercice 07 : ft_list_at](C12/ex07)
+
+[Exercice 08 : ft_list_reverse](C12/ex08)
+
+[Exercice 09 : ft_list_foreach](C12/ex09)
+
+[Exercice 10 : ft_list_foreach_if](C12/ex10)
+
+[Exercice 11 : ft_list_find](C12/ex11)
+
+[Exercice 12 : ft_list_remove_if](C12/ex12)
+
+[Exercice 13 : ft_list_merge](C12/ex13)
+
+[Exercice 14 : ft_list_sort](C12/ex14)
+
+[Exercice 15 : ft_list_reverse_fun](C12/ex15)
+
+[Exercice 16 : ft_sorted_list_insert](C12/ex16)
+
+[Exercice 17 : ft_sorted_list_merge](C12/ex17)
+
+
+## C13
+
+[ko.subject.pdf](C13/ko.subject.pdf)
+
+[Exercise 00 : btree_create_node](C13/ex00)
+
+[Exercise 01 : btree_apply_prefix](C13/ex01)
+
+[Exercise 02 : btree_apply_infix](C13/ex02)
+
+[Exercise 03 : btree_apply_suffix](C13/ex03)
+
+[Exercise 04 : btree_insert_data](C13/ex04)
+
+[Exercise 05 : btree_search_item](C13/ex05)
+
+[Exercise 06 : btree_level_count](C13/ex06)
+
+[Exercise 07 : btree_apply_by_level](C13/ex07)
