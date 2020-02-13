@@ -6,6 +6,8 @@
 
 [ko.subject.pdf](Shell00/ko.subject.pdf)
 
+[en.subject.pdf](Shell00/en.subject.pdf)
+
 [Exercise 00 : Z](Shell00/ex00)
 
 [Exercise 01 : testShell00](Shell00/ex01)
