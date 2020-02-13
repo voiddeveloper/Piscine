@@ -6,7 +6,7 @@
 /*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 12:48:27 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/13 16:58:52 by gicho            ###   ########.fr       */
+/*   Updated: 2020/02/13 17:10:20 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,12 +66,9 @@ void	btree_apply_by_level(t_btree *root, void (*applyf)(void *item,
 		if (tmp->node->right)
 			push_node(&q, tmp->node->right, tmp->level + 1);
 		if (level != tmp->level)
-		{
-			++level;
-			applyf(tmp->node->item, tmp->level, 1);
-		}
+			applyf(tmp->node->item, ++level, 1);
 		else
-			applyf(tmp->node->item, tmp->level, 0);
+			applyf(tmp->node->item, level, 0);
 		pop_node(&q);
 	}
 }
