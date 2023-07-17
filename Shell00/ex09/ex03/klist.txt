@@ -1,5 +1,0 @@
-Credentials cache: API:921877F5-355A-4CA3-B2E2-364ADFB9F927
-        Principal: gicho@42SEOUL.KR
-
-  Issued                Expires               Principal
-Jan 20 13:16:03 2020  Jan 20 23:15:59 2020  krbtgt/42SEOUL.KR@42SEOUL.KR
